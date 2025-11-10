@@ -1,121 +1,231 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLXDTV – Świąteczne życzenia wideo 🎅</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALLXDTV • Świąteczne życzenia wideo od Mikołaja</title>
+  <meta name="description" content="Formularz zamówienia na personalizowane życzenia wideo od Mikołaja. Wypełnij i poczekaj na kontakt zwrotny.">
+  <meta property="og:title" content="ALLXDTV • Świąteczne życzenia wideo od Mikołaja">
+  <meta property="og:description" content="Wypełnij formularz — odezwiemy się jak najszybciej i potwierdzimy szczegóły.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(180deg, #d60b28, #8b001a);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    :root{
+      --bg:#0d0f14; --panel:#151a23; --panel2:#1a2030; --text:#edf1fb; --muted:#aab3c4;
+      --accent:#e63946; --gold:#ffd166; --mint:#2ec4b6; --border:rgba(255,255,255,.08);
+      --radius:14px; --shadow:0 8px 26px rgba(0,0,0,.35);
     }
-    header {
-      padding: 40px 20px 10px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    p.subtitle {
-      font-size: 1.1em;
-      color: #ffd6d6;
-      margin-bottom: 30px;
-    }
-    form {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      padding: 20px;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    input, textarea, select, button {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 10px;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
-    input, textarea, select {
-      color: #000;
-    }
-    button {
-      background: #ffd700;
-      color: #b00000;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    button:hover {
-      background: #ffea61;
-      transform: scale(1.05);
-    }
-    footer {
-      font-size: 0.9em;
-      color: #ffb3b3;
-      padding: 20px;
-    }
-    .price-boxes {
-      display: grid;
-      gap: 15px;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      max-width: 600px;
-      margin: 0 auto 20px;
-    }
-    .box {
-      background: rgba(255,255,255,0.15);
-      border-radius: 15px;
-      padding: 15px;
-      font-weight: bold;
-      color: #fff;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 10% -10%, #1b2132 0%, #0d0f14 60%), var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--gold);text-decoration:none}
+    .wrap{max-width:1020px;margin:0 auto;padding:0 14px}
+    header{padding:18px 0}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 180deg at 50% 50%, #ff4d6d, #ffd166, #2ec4b6, #5f0fff, #ff4d6d);box-shadow:0 6px 14px rgba(0,0,0,.35)}
+    h1{font-size:18px;letter-spacing:.2px;margin:0;font-weight:800}
+    .chip{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    .hero{padding:8px 0 14px}
+    .hero h2{font-size:30px;margin:8px 0 6px}
+    .hero p{margin:0;color:var(--muted)}
+    .contactbar{margin:10px 0 16px;padding:10px 12px;background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:12px;font-size:14px}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(1,minmax(0,1fr))}
+    @media(min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:14px;box-shadow:0 10px 24px rgba(0,0,0,.4), inset 0 0 0 1px rgba(255,255,255,.04)}
+    .card h3{margin:0 0 6px; display:flex; align-items:center; gap:8px;}
+    .card h3 .ico{width:18px; height:18px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; background:rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);}
+    .price{display:flex;align-items:baseline;gap:8px;margin:4px 0 8px; background:linear-gradient(90deg, rgba(255,209,102,.18), rgba(255,255,255,0)); padding:6px 8px; border-radius:10px}
+    .amt{font-size:26px;font-weight:800}
+    .unit{font-size:12px;color:var(--muted)}
+    .card ul{margin:6px 0 0;padding-left:18px}
+    .card ul li{margin:4px 0;color:var(--muted)}
+    .note{margin-top:8px;color:var(--muted);font-size:12px}
+    .divider{height:1px;background:var(--border);margin:18px 0}
+    .divider.garland{height:12px; background: repeating-linear-gradient(90deg, #ffd166, #ffd166 10px, transparent 10px, transparent 16px), repeating-linear-gradient(90deg, #2ec4b6, #2ec4b6 10px, transparent 10px, transparent 16px); background-blend-mode: screen; opacity:.25; border-radius:8px}
+    form.form{display:grid;gap:10px}
+    .row{display:grid;gap:10px;grid-template-columns:1fr}
+    @media(min-width:720px){.row{grid-template-columns:1fr 1fr}}
+    label{display:block;font-weight:700;margin:4px 0 6px;font-size:14px}
+    input, select, textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--panel2);color:var(--text);outline:none}
+    textarea{min-height:110px;resize:vertical}
+    .btn{background:linear-gradient(180deg, var(--mint), #1bb5a6);color:#061013;font-weight:800;border:0;border-radius:12px;padding:12px 16px;cursor:pointer;box-shadow:0 8px 16px rgba(46,196,182,.28)}
+    .small{font-size:12px;color:var(--muted)}
+    .hidden-hp{position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden}
+    footer{padding:20px 0 30px;color:var(--muted);font-size:12px}
+    .snow { pointer-events:none; position:fixed; inset:0; overflow:hidden; z-index:0; }
+    .flake { position:absolute; top:-10px; font-size:12px; opacity:.75; animation: fall linear infinite; }
+    @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity:.9; } }
+    .wrap, header, main, footer { position: relative; z-index:1; }
+    .hero h2::before{ content:"🎄"; margin-right:8px; filter: drop-shadow(0 2px 6px rgba(0,0,0,.25)); }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🎅 ALLXDTV – Zamów świąteczne życzenia wideo!</h1>
-    <p class="subtitle">Wypełnij formularz – odezwiemy się jak najszybciej! ✉️</p>
+  <div class="snow" aria-hidden="true"></div>
+  <header class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>ALLXDTV • Świąteczne życzenia wideo</h1>
+          <span class="chip">Formularz zgłoszeniowy</span>
+        </div>
+      </div>
+      <span class="chip">Opcje: 8/16/24 s • +18</span>
+    </div>
   </header>
 
-  <div class="price-boxes">
-    <div class="box">🎁 8 sekund – 25 zł</div>
-    <div class="box">🎁 16 sekund – 49 zł</div>
-    <div class="box">🎁 24 sekundy – 99 zł</div>
-    <div class="box">🔥 Wersja +18 (16–24 s) – 99 zł</div>
-  </div>
+  <main class="wrap">
+    <section class="hero">
+      <h2>Personalizowane życzenia 🎅</h2>
+      <p>Wypełnij formularz — <strong>odezwiemy się jak najszybciej</strong> i potwierdzimy szczegóły.</p>
+    </section>
 
-  <form action="https://formsubmit.co/allxdtv.wspolpraca@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="Nowe zgłoszenie – ALLXDTV 🎅">
-    <input type="hidden" name="_autoresponse" value="Dziękujemy za wiadomość! Odezwiemy się jak najszybciej.">
+    <div class="contactbar">
+      Nie chcesz wypełniać formularza? Napisz: <a href="mailto:allxdtv.wspolpraca@gmail.com">allxdtv.wspolpraca@gmail.com</a> lub wyślij wiadomość na IG/TikTok: <strong>@ALLXDTV</strong>.
+    </div>
 
-    <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
-    <input type="email" name="email" placeholder="Twój adres e-mail" required>
-    <select name="rodzaj" required>
-      <option value="">Wybierz rodzaj filmu</option>
-      <option>🎁 8 sekund</option>
-      <option>🎁 16 sekund</option>
-      <option>🎁 24 sekundy</option>
-      <option>🔥 +18 (16–24 sekundy)</option>
-    </select>
-    <textarea name="message" placeholder="Opisz swój pomysł lub tekst życzeń..." rows="6" required></textarea>
-    <button type="submit">Wyślij formularz</button>
-  </form>
+    <section class="grid" aria-label="Warianty cenowe">
+      <article class="card">
+        <h3><span class="ico">🎁</span>8 sekund</h3>
+        <div class="price"><span class="amt">25&nbsp;zł</span><span class="unit">orientacyjnie*</span></div>
+        <ul><li>Krótko i treściwie</li><li>Najlepsze do szybkich życzeń</li></ul>
+        <p class="note">*Ceny informacyjne. Potwierdzimy w odpowiedzi.</p>
+      </article>
 
-  <footer>
-    ✨ Jeśli nie chcesz wypełniać formularza, możesz napisać do nas na Instagramie lub TikToku:  
-    <strong>@alxdtv</strong>  
-    <br><br>
-    © 2025 ALLXDTV – Wszelkie prawa zastrzeżone 🎄
-  </footer>
+      <article class="card">
+        <h3><span class="ico">✨</span>16 sekund</h3>
+        <div class="price"><span class="amt">49&nbsp;zł</span><span class="unit">orientacyjnie*</span></div>
+        <ul><li>Więcej scen i emocji</li><li>2–3 ujęcia</li></ul>
+        <p class="note">*Ceny informacyjne. Potwierdzimy w odpowiedzi.</p>
+      </article>
+
+      <article class="card">
+        <h3><span class="ico">⭐</span>24 sekundy</h3>
+        <div class="price"><span class="amt">79&nbsp;zł</span><span class="unit">orientacyjnie*</span></div>
+        <ul><li>Najwięcej możliwości</li><li>3–4 ujęcia</li></ul>
+        <p class="note">*Ceny informacyjne. Potwierdzimy w odpowiedzi.</p>
+      </article>
+    </section>
+
+    <section class="grid" aria-label="Warianty +18" style="margin-top:12px">
+      <article class="card">
+        <h3><span class="ico">🎀</span>+18 • 16 sekund</h3>
+        <div class="price"><span class="amt">99&nbsp;zł</span><span class="unit">orientacyjnie*</span></div>
+        <ul><li>Mikołaj &amp; Pani Mikołajowa</li><li>Elegancko, bez wulgarności</li></ul>
+        <p class="note">*Ceny informacyjne. Potwierdzimy w odpowiedzi.</p>
+      </article>
+
+      <article class="card">
+        <h3><span class="ico">🔥</span>+18 • 24 sekundy</h3>
+        <div class="price"><span class="amt">99&nbsp;zł</span><span class="unit">orientacyjnie*</span></div>
+        <ul><li>Więcej scen i gry aktorskiej</li><li>Styl filmowy</li></ul>
+        <p class="note">*Ceny informacyjne. Potwierdzimy w odpowiedzi.</p>
+      </article>
+    </section>
+
+    <div class="divider garland"></div>
+
+    <!-- FORM – FormSubmit -->
+    <section>
+      <h2>Złóż zamówienie</h2>
+      <form action="https://formsubmit.co/allxdtv.wspolpraca@gmail.com" method="POST" class="form">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="ALLXDTV – nowe zapytanie 📨">
+        <input type="hidden" name="_autoresponse" value="Dziękujemy za wiadomość! Odezwiemy się jak najszybciej.">
+        <input type="text" class="hidden-hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="row">
+          <div>
+            <label for="name">Imię i nazwisko / nazwa</label>
+            <input id="name" name="Imię/nazwa" required placeholder="np. Jan Kowalski">
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input id="email" name="E-mail" type="email" required placeholder="np. jan@domena.pl">
+          </div>
+        </div>
+
+        <div>
+          <label for="variant">Wybierz wariant</label>
+          <select id="variant" name="Wariant" required>
+            <option value="8">8 sekund – 25 zł</option>
+            <option value="16">16 sekund – 49 zł</option>
+            <option value="24">24 sekundy – 79 zł</option>
+            <option value="16+18">+18 • 16 sekund – 99 zł</option>
+            <option value="24+18">+18 • 24 sekundy – 99 zł</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="language">Język nagrania</label>
+            <select id="language" name="Język">
+              <option value="pl" selected>Polski</option>
+              <option value="de">Niemiecki</option>
+              <option value="en">Angielski</option>
+            </select>
+          </div>
+          <div>
+            <label for="needDate">Preferowana data</label>
+            <input id="needDate" name="Preferowana data" type="date">
+          </div>
+        </div>
+
+        <div>
+          <label for="recipientName">Dla kogo?</label>
+          <input id="recipientName" name="Dla kogo" placeholder="np. Ania, zespół marketingu, klasa 3B">
+        </div>
+
+        <div>
+          <label for="script">Treść / pomysł na życzenia</label>
+          <textarea id="script" name="Treść/pomysł" placeholder="Co Mikołaj ma powiedzieć? Linki do materiałów mile widziane."></textarea>
+        </div>
+
+        <div>
+          <label for="location">Miejsce akcji (opcjonalnie)</label>
+          <input id="location" name="Miejsce akcji" placeholder="np. świąteczny salon / warsztat Mikołaja / ogród">
+        </div>
+
+        <div>
+          <label><input type="checkbox" id="rodo" name="Zgoda RODO" required> Wyrażam zgodę na kontakt w celu obsługi zamówienia.</label>
+        </div>
+
+        <button class="btn" type="submit">Wyślij formularz</button>
+        <div class="small" style="margin-top:8px">Po wysłaniu zobaczysz stronę potwierdzenia – sprawdź skrzynkę e-mail.</div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="divider"></div>
+      <p>© 2025 ALLXDTV • Oferta świątecznych życzeń wideo.</p>
+      <p class="small">To jest formularz zamówienia. Odpowiemy jak najszybciej.</p>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const snow = document.querySelector('.snow');
+      if(!snow) return;
+      const symbols = ["❄","❅","❆","✼","✻"];
+      const count = 50;
+      for(let i=0;i<count;i++){
+        const s = document.createElement('div');
+        s.className = 'flake';
+        s.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+        const size = 10 + Math.random()*12;
+        s.style.left = (Math.random()*100) + 'vw';
+        s.style.animationDuration = (6 + Math.random()*8) + 's';
+        s.style.animationDelay = (Math.random()*6) + 's';
+        s.style.fontSize = size + 'px';
+        s.style.opacity = (0.4 + Math.random()*0.6).toFixed(2);
+        snow.appendChild(s);
+      }
+    })();
+  </script>
 </body>
 </html>
