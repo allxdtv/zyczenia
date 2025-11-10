@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLXDTV – Świąteczne życzenia wideo 🎅</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #d60b28, #8b001a);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px 10px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-size: 1.1em;
+      color: #ffd6d6;
+      margin-bottom: 30px;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    input, textarea, select {
+      color: #000;
+    }
+    button {
+      background: #ffd700;
+      color: #b00000;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #ffea61;
+      transform: scale(1.05);
+    }
+    footer {
+      font-size: 0.9em;
+      color: #ffb3b3;
+      padding: 20px;
+    }
+    .price-boxes {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .box {
+      background: rgba(255,255,255,0.15);
+      border-radius: 15px;
+      padding: 15px;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎅 ALLXDTV – Zamów świąteczne życzenia wideo!</h1>
+    <p class="subtitle">Wypełnij formularz – odezwiemy się jak najszybciej! ✉️</p>
+  </header>
+
+  <div class="price-boxes">
+    <div class="box">🎁 8 sekund – 25 zł</div>
+    <div class="box">🎁 16 sekund – 49 zł</div>
+    <div class="box">🎁 24 sekundy – 99 zł</div>
+    <div class="box">🔥 Wersja +18 (16–24 s) – 99 zł</div>
+  </div>
+
+  <form action="https://formsubmit.co/allxdtv.wspolpraca@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nowe zgłoszenie – ALLXDTV 🎅">
+    <input type="hidden" name="_autoresponse" value="Dziękujemy za wiadomość! Odezwiemy się jak najszybciej.">
+
+    <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
+    <input type="email" name="email" placeholder="Twój adres e-mail" required>
+    <select name="rodzaj" required>
+      <option value="">Wybierz rodzaj filmu</option>
+      <option>🎁 8 sekund</option>
+      <option>🎁 16 sekund</option>
+      <option>🎁 24 sekundy</option>
+      <option>🔥 +18 (16–24 sekundy)</option>
+    </select>
+    <textarea name="message" placeholder="Opisz swój pomysł lub tekst życzeń..." rows="6" required></textarea>
+    <button type="submit">Wyślij formularz</button>
+  </form>
+
+  <footer>
+    ✨ Jeśli nie chcesz wypełniać formularza, możesz napisać do nas na Instagramie lub TikToku:  
+    <strong>@alxdtv</strong>  
+    <br><br>
+    © 2025 ALLXDTV – Wszelkie prawa zastrzeżone 🎄
+  </footer>
+</body>
+</html>
